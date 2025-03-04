@@ -3,70 +3,65 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Link from '../components/Link.astro';
 
 ---
+<head>
+  <!-- Include Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<style>
+  body {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .gallery img {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .gallery img:hover {
+    transform: translateY(-10px);
+  }
+</style>
+
 <MainLayout title="Titel">
-	    <article class="">
-        <h1 class="text-2xl font-bold mb-4">110-filmens storhed og forfald</h1>
-    
-    
+    <!-- Hero Section -->
+    <section class="relative bg-gray-800 text-white py-32" style="background-image: url('/path/to/your/image.jpg'); background-size: cover; background-position: center;">
+        <div class="container mx-auto text-center">
+            <h1 class="text-6xl font-bold mb-4">110-FILMENS STORHED OG FORFALD</h1>
+        </div>
+    </section>
 
+    <article class="max-w-3xl mx-auto my-16">
+        <!-- Simple Gallery with 3 pictures -->
+        <div class="gallery grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16 mb-16">
+            <div class="gallery-item">
+                <img src="/public/img1.jpg" alt="Image 1" class="w-full h-auto">
+            </div>
+            <div class="gallery-item">
+                <img src="/public/img2.jpg" alt="Image 2" class="w-full h-auto">
+            </div>
+            <div class="gallery-item">
+                <img src="/public/img3.jpg" alt="Image 3" class="w-full h-auto">
+            </div>
+        </div>
 
-		<!-- ad a simple carousel whit 3 pictures -->
-<div>
-	  <div id="carouselExample" class="carousel slide" data-ride="carousel">
-	<div class="carousel-inner">
-	  <div class="carousel-item active">
-		<img src="/public/img1.jpg" class="d-block w-100" alt="...">
-	  </div>
-	  <div class="carousel-item">
-		<img src="/public/img2.jpg" class="d-block w-100" alt="...">
-	  </div>
-	  <div class="carousel-item">
-		<img src="/public/img3.jpg" class="d-block w-100" alt="...">
-	  </div>
-	</div>
-	<a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
-	  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-	  <span class="sr-only">Previous</span>
-	</a>
-	<a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
-	  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-	  <span class="sr-only">Next</span>
-	</a>
-  </div>
-</div>
-
-
-       
-
-		   <section class="text-center mb-8 prose bg-gray-400">
-            <h2 class="text-xl font-semibold mb-2">Fra succes til tilbagegang</h2>
-            <p class="mb-4">Kodak lancerede 110-film i 1972, og det kompakte format blev hurtigt populært blandt amatører.
-Den brugervenlige kassette og små kameraer gjorde det let at tage billeder.
-Store producenter som Canon og Minolta udviklede avancerede modeller, men tekniske begrænsninger gjorde det svært at konkurrere med 35 mm-film.</p>
+        <!-- Text Sections -->
+        <section id="section1" class="text-center mb-24 prose bg-gray-400 p-16 rounded">
+            <h2 class="text-2xl font-semibold mb-8">Fra succes til tilbagegang</h2>
+            <p class="mb-8">Kodak lancerede 110-film i 1972, og det kompakte format blev hurtigt populært blandt amatører. Den brugervenlige kassette og små kameraer gjorde det let at tage billeder. Store producenter som Canon og Minolta udviklede avancerede modeller, men tekniske begrænsninger gjorde det svært at konkurrere med 35 mm-film.</p>
         </section>
-        <section class=" text-center mb-8 prose">
-            <h2 class="text-xl font-semibold mb-2">1980’erne: Faldet begynder</h2>
-            <p class="mb-4">I begyndelsen af 1980’erne stod 110-film over for stigende konkurrence fra 35 mm kompaktkameraer.
-De blev billigere og tilbød langt bedre billedkvalitet. Fotografiets udvikling og forbrugernes krav til skarpere billeder gjorde 110-formatet mindre attraktivt.</p>
+        <section id="section2" class="text-center mb-24 prose p-16 rounded">
+            <h2 class="text-2xl font-semibold mb-8">1980'erne: Faldet begynder</h2>
+            <p class="mb-8">I begyndelsen af 1980'erne stod 110-film over for stigende konkurrence fra 35 mm kompaktkameraer. De blev billigere og tilbød langt bedre billedkvalitet. Fotografiets udvikling og forbrugernes krav til skarpere billeder gjorde 110-formatet mindre attraktivt.</p>
         </section>
-        <section class=" text-center mb-8 prose  bg-gray-400">
-            <p class="mb-4">Kodak forsøgte at fastholde markedet med disc-film i 1982, men dette format blev aldrig populært og kunne ikke afløse 110-filmens dalende status.
-En anden faktor var ændringer i fremkaldelsesindustrien.
-Fotolaboratorier begyndte at prioritere mere rentable filmformater, og kvaliteten af 110-fremkaldelser faldt.</p>
+        <section id="section3" class="text-center mb-24 prose bg-gray-400 p-16 rounded">
+            <p class="mb-8">Kodak forsøgte at fastholde markedet med disc-film i 1982, men dette format blev aldrig populært og kunne ikke afløse 110-filmens dalende status. En anden faktor var ændringer i fremkaldelsesindustrien. Fotolaboratorier begyndte at prioritere mere rentable filmformater, og kvaliteten af 110-fremkaldelser faldt.</p>
         </section>
-
-        <section class=" text-center mb-8 prose">
-            <p class="mb-4">Mange brugere oplevede grynede og uskarpe billeder, hvilket forringede formatets omdømme yderligere.
-Flere kamerafabrikanter stoppede produktionen af 110-kameraer, hvilket førte til en gradvis udfasning af formatet.
-
-Mod slutningen af 1980’erne var 110-film næsten forsvundet fra de store butikshylder.
-Den blev erstattet af mere alsidige og højkvalitets alternativer. Kun en lille gruppe entusiaster holdt liv i formatet.</p>
+        <section id="section4" class="text-center mb-24 prose p-16 rounded">
+            <p class="mb-8">Mange brugere oplevede grynede og uskarpe billeder, hvilket forringede formatets omdømme yderligere. Flere kamerafabrikanter stoppede produktionen af 110-kameraer, hvilket førte til en gradvis udfasning af formatet. Mod slutningen af 1980’erne var 110-film næsten forsvundet fra de store butikshylder. Den blev erstattet af mere alsidige og højkvalitets alternativer. Kun en lille gruppe entusiaster holdt liv i formatet.</p>
         </section>
-        <section class="text-center mb-8 prose  bg-gray-400">
-            <h2 class="text-xl font-semibold mb-2">Fra mainstream til niche</h2>
-            <p class="mb-4">Ved 1990’ernes slutning var 110-film stort set væk fra markedet.
-Fujifilm stoppede produktionen i 2009, men Lomography genoptog den i 2011 med både farve- og sort/hvid-film.
-I dag lever formatet videre blandt nostalgikere og eksperimenterende fotografer, men dets storhedstid er for længst forbi.</p>
+        <section id="section5" class="text-center mb-24 prose bg-gray-400 p-16 rounded">
+            <h2 class="text-2xl font-semibold mb-8">Fra mainstream til niche</h2>
+            <p class="mb-8">Ved 1990’ernes slutning var 110-film stort set væk fra markedet. Fujifilm stoppede produktionen i 2009, men Lomography genoptog den i 2011 med både farve- og sort/hvid-film. I dag lever formatet videre blandt nostalgikere og eksperimenterende fotografer, men dets storhedstid er for længst forbi.</p>
         </section>
     </article>
 </MainLayout>
