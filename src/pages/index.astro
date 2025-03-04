@@ -20,13 +20,39 @@ import Link from '../components/Link.astro';
   .gallery img:hover {
     transform: translateY(-10px);
   }
+
+  @keyframes slideIn {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  .slide-in {
+    animation: slideIn 1s ease-out;
+  }
+
+  .hero-text {
+    font-size: 8rem;
+    font-weight: bold;
+    background: linear-gradient(to right, #ff8c00, #2e1c00); /* Gradient background */
+    -webkit-background-clip: text;
+    color: transparent;
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
 </style>
 
 <MainLayout title="Titel">
     <!-- Hero Section -->
-    <section class="relative bg-gray-800 text-white py-32" style="background-image: url('/path/to/your/image.jpg'); background-size: cover; background-position: center;">
-        <div class="container mx-auto text-center">
-            <h1 class="text-6xl font-bold mb-4">110-FILMENS STORHED OG FORFALD</h1>
+    <section class="relative bg-gray-800 text-white" style="height: auto;">
+        <img src="/public/hero_110.png" alt="Hero Image" class="w-full h-auto object-cover">
+        <div class="absolute inset-0 flex items-center justify-center prose ">
+            <h1 class="hero-text slide-in">110-FILMENS STORHED OG FORFALD</h1>
         </div>
     </section>
 
@@ -45,7 +71,7 @@ import Link from '../components/Link.astro';
         </div>
 
         <!-- Text Sections -->
-        <section id="section1" class="text-center mb-24 prose bg-gray-400 p-16 rounded">
+        <section id="section1" class="text-center mb-24 prose bg-yellow-200 p-16 rounded">
             <h2 class="text-2xl font-semibold mb-8">Fra succes til tilbagegang</h2>
             <p class="mb-8">Kodak lancerede 110-film i 1972, og det kompakte format blev hurtigt populært blandt amatører. Den brugervenlige kassette og små kameraer gjorde det let at tage billeder. Store producenter som Canon og Minolta udviklede avancerede modeller, men tekniske begrænsninger gjorde det svært at konkurrere med 35 mm-film.</p>
         </section>
@@ -53,13 +79,13 @@ import Link from '../components/Link.astro';
             <h2 class="text-2xl font-semibold mb-8">1980'erne: Faldet begynder</h2>
             <p class="mb-8">I begyndelsen af 1980'erne stod 110-film over for stigende konkurrence fra 35 mm kompaktkameraer. De blev billigere og tilbød langt bedre billedkvalitet. Fotografiets udvikling og forbrugernes krav til skarpere billeder gjorde 110-formatet mindre attraktivt.</p>
         </section>
-        <section id="section3" class="text-center mb-24 prose bg-gray-400 p-16 rounded">
+        <section id="section3" class="text-center mb-24 prose bg-yellow-200 p-16 rounded">
             <p class="mb-8">Kodak forsøgte at fastholde markedet med disc-film i 1982, men dette format blev aldrig populært og kunne ikke afløse 110-filmens dalende status. En anden faktor var ændringer i fremkaldelsesindustrien. Fotolaboratorier begyndte at prioritere mere rentable filmformater, og kvaliteten af 110-fremkaldelser faldt.</p>
         </section>
         <section id="section4" class="text-center mb-24 prose p-16 rounded">
             <p class="mb-8">Mange brugere oplevede grynede og uskarpe billeder, hvilket forringede formatets omdømme yderligere. Flere kamerafabrikanter stoppede produktionen af 110-kameraer, hvilket førte til en gradvis udfasning af formatet. Mod slutningen af 1980’erne var 110-film næsten forsvundet fra de store butikshylder. Den blev erstattet af mere alsidige og højkvalitets alternativer. Kun en lille gruppe entusiaster holdt liv i formatet.</p>
         </section>
-        <section id="section5" class="text-center mb-24 prose bg-gray-400 p-16 rounded">
+        <section id="section5" class="text-center mb-24 prose bg-yellow-200 p-16 rounded">
             <h2 class="text-2xl font-semibold mb-8">Fra mainstream til niche</h2>
             <p class="mb-8">Ved 1990’ernes slutning var 110-film stort set væk fra markedet. Fujifilm stoppede produktionen i 2009, men Lomography genoptog den i 2011 med både farve- og sort/hvid-film. I dag lever formatet videre blandt nostalgikere og eksperimenterende fotografer, men dets storhedstid er for længst forbi.</p>
         </section>
