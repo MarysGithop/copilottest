@@ -45,6 +45,10 @@ import Link from '../components/Link.astro';
     padding: 1rem;
     border-radius: 0.5rem;
   }
+
+  .bg-custom-brown {
+    background-color: #a6774e;
+  }
 </style>
 
 <MainLayout title="Titel">
@@ -57,6 +61,15 @@ import Link from '../components/Link.astro';
     </section>
 
     <article class="max-w-3xl mx-auto my-16">
+
+      
+
+        <!-- Text Sections -->
+        <section id="section1" class="text-center mb-24 prose bg-custom-brown p-16 rounded">
+            <h2 class=" text-amber-50 text-2xl font-semibold mb-8">Fra succes til tilbagegang</h2>
+            <p class="mb-8  text-amber-50">Kodak lancerede 110-film i 1972, og det kompakte format blev hurtigt populært blandt amatører. Den brugervenlige kassette og små kameraer gjorde det let at tage billeder. Store producenter som Canon og Minolta udviklede avancerede modeller, men tekniske begrænsninger gjorde det svært at konkurrere med 35 mm-film.</p>
+        </section>
+
         <!-- Simple Gallery with 3 colour pictures -->
         <div class="gallery grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16 mb-16">
             <div class="gallery-item">
@@ -69,21 +82,15 @@ import Link from '../components/Link.astro';
                 <img src="/public/img8.jpg" alt="Image 8" class="w-full h-auto">
             </div>
         </div>
-
-        <!-- Text Sections -->
-        <section id="section1" class="text-center mb-24 prose bg-yellow-200 p-16 rounded">
-            <h2 class="text-2xl font-semibold mb-8">Fra succes til tilbagegang</h2>
-            <p class="mb-8">Kodak lancerede 110-film i 1972, og det kompakte format blev hurtigt populært blandt amatører. Den brugervenlige kassette og små kameraer gjorde det let at tage billeder. Store producenter som Canon og Minolta udviklede avancerede modeller, men tekniske begrænsninger gjorde det svært at konkurrere med 35 mm-film.</p>
-        </section>
+        
         <section id="section2" class="text-center mb-24 prose p-16 rounded">
             <h2 class="text-2xl font-semibold mb-8">1980'erne: Faldet begynder</h2>
             <p class="mb-8">I begyndelsen af 1980'erne stod 110-film over for stigende konkurrence fra 35 mm kompaktkameraer. De blev billigere og tilbød langt bedre billedkvalitet. Fotografiets udvikling og forbrugernes krav til skarpere billeder gjorde 110-formatet mindre attraktivt.</p>
         </section>
-        <section id="section3" class="text-center mb-24 prose bg-yellow-200 p-16 rounded">
-            <p class="mb-8">Kodak forsøgte at fastholde markedet med disc-film i 1982, men dette format blev aldrig populært og kunne ikke afløse 110-filmens dalende status. En anden faktor var ændringer i fremkaldelsesindustrien. Fotolaboratorier begyndte at prioritere mere rentable filmformater, og kvaliteten af 110-fremkaldelser faldt.</p>
+        <section id="section3" class="text-center mb-24 prose bg-custom-brown p-16 rounded">
+            <p class="mb-8 text-amber-50">Kodak forsøgte at fastholde markedet med disc-film i 1982, men dette format blev aldrig populært og kunne ikke afløse 110-filmens dalende status. En anden faktor var ændringer i fremkaldelsesindustrien. Fotolaboratorier begyndte at prioritere mere rentable filmformater, og kvaliteten af 110-fremkaldelser faldt.</p>
         </section>
 
-    <article class="max-w-3xl mx-auto my-16">
         <!-- Simple Gallery with 4 b/w pictures -->
         <div class="gallery grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-16 mb-16">
             <div class="gallery-item">
@@ -95,7 +102,7 @@ import Link from '../components/Link.astro';
             <div class="gallery-item">
                 <img src="/public/img7.jpg" alt="Image 3" class="w-full h-auto">
             </div>
-			 <div class="gallery-item">
+            <div class="gallery-item">
                 <img src="/public/img9.jpg" alt="Image 3" class="w-full h-auto">
             </div>
         </div>
@@ -103,9 +110,9 @@ import Link from '../components/Link.astro';
         <section id="section4" class="text-center mb-24 prose p-16 rounded">
             <p class="mb-8">Mange brugere oplevede grynede og uskarpe billeder, hvilket forringede formatets omdømme yderligere. Flere kamerafabrikanter stoppede produktionen af 110-kameraer, hvilket førte til en gradvis udfasning af formatet. Mod slutningen af 1980’erne var 110-film næsten forsvundet fra de store butikshylder. Den blev erstattet af mere alsidige og højkvalitets alternativer. Kun en lille gruppe entusiaster holdt liv i formatet.</p>
         </section>
-        <section id="section5" class="text-center mb-24 prose bg-yellow-200 p-16 rounded">
-            <h2 class="text-2xl font-semibold mb-8">Fra mainstream til niche</h2>
-            <p class="mb-8">Ved 1990’ernes slutning var 110-film stort set væk fra markedet. Fujifilm stoppede produktionen i 2009, men Lomography genoptog den i 2011 med både farve- og sort/hvid-film. I dag lever formatet videre blandt nostalgikere og eksperimenterende fotografer, men dets storhedstid er for længst forbi.</p>
+        <section id="section5" class="text-center mb-24 prose bg-custom-brown p-16 rounded">
+            <h2 class=" text-amber-50 text-2xl font-semibold mb-8">Fra mainstream til niche</h2>
+            <p class="mb-8  text-amber-50">Ved 1990'ernes slutning var 110-film stort set væk fra markedet. Fujifilm stoppede produktionen i 2009, men Lomography genoptog den i 2011 med både farve- og sort/hvid-film. I dag lever formatet videre blandt nostalgikere og eksperimenterende fotografer, men dets storhedstid er for længst forbi.</p>
         </section>
     </article>
 </MainLayout>
